@@ -1,0 +1,55 @@
+{
+  "name": "ailo",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:electron": "cross-env NODE_ENV=development DEV_SERVER_URL=http://localhost:5173/  electron .",
+    "dev:vite": "vite",
+    "format": "prettier . --write && uv run ruff format"
+  },
+  "engines": {
+    "node": "24.17.0"
+  },
+  "packageManager": "npm@11.13.0",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.14.4",
+    "@grpc/proto-loader": "^0.8.1",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.1",
+    "@trivago/prettier-plugin-sort-imports": "6.0.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.2",
+    "cross-env": "^10.1.0",
+    "electron": "^42.5.0",
+    "electron-builder": "^26.15.3",
+    "prettier": "3.8.4",
+    "prettier-plugin-tailwindcss": "0.8.0",
+    "prettier-plugin-toml": "2.0.6",
+    "tailwindcss": "^4.3.1",
+    "vite": "^8.1.0"
+  },
+  "main": "./src/main.js",
+  "prettier": {
+    "experimentalOperatorPosition": "start",
+    "semi": false,
+    "trailingComma": "none",
+    "bracketSpacing": false,
+    "plugins": [
+      "prettier-plugin-toml",
+      "@trivago/prettier-plugin-sort-imports",
+      "prettier-plugin-tailwindcss"
+    ],
+    "importOrder": [
+      "<BUILTIN_MODULES>",
+      "<THIRD_PARTY_MODULES>",
+      "^[./]"
+    ],
+    "importOrderSeparation": true,
+    "importOrderSortSpecifiers": true,
+    "tailwindStylesheet": "./src/view/style.css"
+  }
+}

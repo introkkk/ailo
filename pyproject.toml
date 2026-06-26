@@ -1,0 +1,15 @@
+[project]
+name = "ailo-service"
+version = "0.0.0"
+requires-python = ">=3.13"
+dependencies = ["grpcio>=1.81.1", "grpcio-tools>=1.81.1"]
+
+[dependency-groups]
+dev = ["ruff>=0.15.19"]
+
+[tool.ruff]
+line-length = 80
+
+[tool.ruff.format]
+line-ending = "lf"
+docstring-code-format = true

@@ -1,0 +1,7 @@
+/.ruff_cache/
+/.venv/
+/node_modules/
+
+/.idea/
+/.vscode/
+/.zed/
